@@ -1,0 +1,534 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3f2fd,
+            #f5f7fa
+        );
+
+    color: #222;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+
+    background: #172554;
+
+    color: white;
+
+    padding: 20px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+nav h2 {
+    font-size: 24px;
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-left: 25px;
+
+    font-weight: bold;
+}
+
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    text-align: center;
+}
+
+
+.section h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+
+.section > p {
+
+    margin-bottom: 20px;
+
+    color: #555;
+}
+
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+
+.search-box input {
+
+    width: 350px;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+.search-box input:focus {
+
+    border-color: #2563eb;
+}
+
+
+.search-box button {
+
+    padding: 14px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+.search-box button:hover {
+
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+#weatherMessage,
+#movieMessage {
+
+    font-weight: bold;
+
+    margin: 15px;
+
+    color: #dc2626;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location-card {
+
+    background: white;
+
+    padding: 25px;
+
+    margin: 25px auto;
+
+    max-width: 700px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.1);
+}
+
+
+.location-card h2 {
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   CURRENT WEATHER
+========================= */
+
+.current-weather {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.1);
+
+    margin: 25px auto;
+}
+
+
+.current-weather h2 {
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+}
+
+
+/* =========================
+   WEATHER GRID
+========================= */
+
+.weather-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(170px, 1fr)
+        );
+
+    gap: 15px;
+}
+
+
+.weather-item {
+
+    background: #f8fafc;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.weather-item span {
+
+    font-size: 28px;
+}
+
+
+.weather-item strong {
+
+    font-size: 20px;
+}
+
+
+.weather-item small {
+
+    color: #666;
+}
+
+
+/* =========================
+   WEATHER CONDITION
+========================= */
+
+.weather-condition {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #eff6ff;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   FORECAST
+========================= */
+
+.forecast-section {
+
+    margin-top: 40px;
+}
+
+
+.forecast-section h2 {
+
+    margin-bottom: 20px;
+}
+
+
+.forecast-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 20px;
+}
+
+
+.forecast-card {
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.2s;
+}
+
+
+.forecast-card:hover {
+
+    transform: translateY(-5px);
+}
+
+
+.forecast-card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+
+.forecast-date {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+.forecast-icon {
+
+    font-size: 45px;
+
+    margin: 10px;
+}
+
+
+.forecast-card p {
+
+    margin: 10px 0;
+
+    color: #444;
+}
+
+
+/* =========================
+   MOVIES
+========================= */
+
+.movie-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+
+.movie-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.1);
+
+    text-align: left;
+
+    transition: transform 0.2s;
+}
+
+
+.movie-card:hover {
+
+    transform: translateY(-5px);
+}
+
+
+.movie-card img {
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.no-poster {
+
+    height: 350px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e5e7eb;
+
+    font-size: 70px;
+}
+
+
+.movie-info {
+
+    padding: 20px;
+}
+
+
+.movie-info h2 {
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+}
+
+
+.movie-info p {
+
+    margin: 10px 0;
+
+    line-height: 1.5;
+
+    color: #555;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav a {
+
+        margin: 0 8px;
+    }
+
+
+    .search-box {
+
+        flex-direction: column;
+    }
+
+
+    .search-box input {
+
+        width: 100%;
+    }
+
+
+    .search-box button {
+
+        width: 100%;
+    }
+
+
+    .section h1 {
+
+        font-size: 28px;
+    }
+
+}

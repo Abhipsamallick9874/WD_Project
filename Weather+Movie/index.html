@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Weather & Movie App</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <h2>
+            Weather + Movie
+        </h2>
+
+        <div>
+
+            <a href="#weather">
+                Weather
+            </a>
+
+            <a href="#movies">
+                Movies
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= WEATHER ================= -->
+
+    <section
+        id="weather"
+        class="section"
+    >
+
+        <h1>
+            Weather Forecast
+        </h1>
+
+        <p>
+            Search weather information by city
+        </p>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+            >
+
+            <button id="weatherBtn">
+                Search Weather
+            </button>
+
+        </div>
+
+
+        <p id="weatherMessage"></p>
+
+
+        <div
+            id="weatherResult"
+            class="weather-result"
+        ></div>
+
+    </section>
+
+
+
+    <!-- ================= MOVIE ================= -->
+
+    <section
+        id="movies"
+        class="section"
+    >
+
+        <h1>
+            Movie Search
+        </h1>
+
+        <p>
+            Search for your favourite movie
+        </p>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="movieInput"
+                placeholder="Enter movie name"
+            >
+
+            <button id="movieBtn">
+                Search Movie
+            </button>
+
+        </div>
+
+
+        <p id="movieMessage"></p>
+
+
+        <div
+            id="movieResult"
+            class="movie-container"
+        ></div>
+
+    </section>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script
+        type="module"
+        src="./JS/main.js"
+    ></script>
+
+
+</body>
+
+</html>
