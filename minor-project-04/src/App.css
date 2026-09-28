@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  background: #2563eb;
+  color: white;
+  padding: 30px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  color: black;
+}
+
+header p {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: white;
+  padding: 15px;
+}
+
+nav button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #e5e7eb;
+  color: #222;
+  cursor: pointer;
+}
+
+nav button.active {
+  background: #2563eb;
+  color: white;
+}
+
+nav button:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.input-section button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item h3 {
+  margin: 0 0 8px;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #dc2626 !important;
+  color: white;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.status {
+  font-size: 12px;
+  color: #666;
+}
+
+.empty-message {
+  text-align: center;
+  color: #777;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.note-form input,
+.note-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+.note-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.note-form button {
+  width: fit-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.note-card {
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.note-header h3 {
+  margin: 0;
+}
+
+.note-card p {
+  line-height: 1.5;
+  color: #555;
+}
+
+.completed-task {
+  background: #dcfce7;
+  border-left: 5px solid #16a34a;
+}
+
+.completed-task h3 {
+  color: #15803d;
+  text-decoration: line-through;
+}
+
+.completed-task .status {
+  color: #15803d;
+  font-weight: bold;
+}
